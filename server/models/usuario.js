@@ -8,21 +8,21 @@ let usuarioSchema = new Schema({
         required: [true, 'El nombre es necesario']
     },
     email: {
-        type: String,
-        required: [true, 'El correo es necesario'],
-        unique: true
+    type: String,
+    required: [true, 'El correo es necesario'],
+    unique: true
     },
     password: {
         type: String,
-        required: [true, 'La contraseña es necesaria']
+        required: [true, 'La contraseña es necesario'],
     },
     img: {
         type: String,
-        require: false
+        requiered: false
     },
     role: {
         type: String,
-        default: 'USER:ROLE'
+        default: 'USER_ROLE'
     },
     estado: {
         type: Boolean,
@@ -32,7 +32,6 @@ let usuarioSchema = new Schema({
         type: Boolean,
         default: false
     }
-
 });
 
-module.exports = mongoose.model('Usuario',usuarioSchema);
+module.exports = mongoose.model('Usuario', usuarioSchema);

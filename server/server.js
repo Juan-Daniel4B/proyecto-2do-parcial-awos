@@ -15,7 +15,8 @@ app.get('/', function (req, res) {
 });
 
 app.use(require('./routers/usuario'));
-
+app.use(require('./routers/categoria'));
+   
 mongoose.connect('mongodb://localhost:27017/cafeteria', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
